@@ -1,0 +1,540 @@
+
+/*
+
+                                          
+                                              
+                                    ,,        
+                                  `7MM        
+                                    MM        
+ ,p6"bo   ,pW"Wq.   ,6"Yb.  ,p6"bo  MMpMMMb.  
+6M'  OO  6W'   `Wb 8)   MM 6M'  OO  MM    MM  
+8M       8M     M8  ,pm9MM 8M       MM    MM  
+YM.    , YA.   ,A9 8M   MM YM.    , MM    MM  
+ YMbmd'   `Ybmd9'  `Moo9^Yo.YMbmd'.JMML  JMML.
+                                                                                       
+                                                
+
+*/
+/* line 509, ../sass/main.scss */
+.coach {
+  min-height: 500px;
+  width: 240px;
+  padding: 0;
+  border: 4px solid #b3b3b3;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  position: relative;
+  /* Wrappers */
+  /* Seats */
+  /* Empty */
+  /* Empty big */
+  /* Title */
+  /* Desk */
+  /* Wall */
+  /* Empty & Cube */
+  /* Cube */
+  /* Entrances */
+}
+/* line 42, ../sass/main.scss */
+.coach a, .coach a:visited, .coach a:link {
+  color: #2985cc;
+}
+/* line 43, ../sass/main.scss */
+.coach a:hover {
+  color: #006dc2;
+}
+/* line 512, ../sass/main.scss */
+.coach .left {
+  float: left;
+}
+/* line 513, ../sass/main.scss */
+.coach .right {
+  float: right;
+}
+/* line 516, ../sass/main.scss */
+.coach .wrapper.x3.y3 {
+  width: 144px;
+  height: 162px;
+}
+/* line 519, ../sass/main.scss */
+.coach .seat {
+  display: block;
+  float: left;
+  width: 46px;
+  height: 52px;
+  padding: 1px;
+  border: none;
+}
+/* line 520, ../sass/main.scss */
+.coach .seat .wrap {
+  display: block;
+  width: 38px;
+  height: 44px;
+  margin: 0;
+  padding: 3px;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #e5e5e5;
+}
+/* line 521, ../sass/main.scss */
+.coach .seat .wrap .base {
+  display: block;
+  width: 36px;
+  height: 42px;
+  padding: 1px;
+  background-color: #b3b3b3;
+  border-radius: 0 0 7px 7px;
+}
+/* line 522, ../sass/main.scss */
+.coach .seat .wrap .base i {
+  font-style: normal;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: #e5e5e5;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 0 0 7px 7px;
+}
+/* line 526, ../sass/main.scss */
+.coach .seat.big {
+  width: 58px;
+  height: 64px;
+}
+/* line 527, ../sass/main.scss */
+.coach .seat.big .wrap {
+  width: 50px;
+  height: 56px;
+}
+/* line 528, ../sass/main.scss */
+.coach .seat.big .wrap .base {
+  width: 48px;
+  height: 54px;
+}
+/* line 529, ../sass/main.scss */
+.coach .seat.big .wrap .base i {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+}
+/* line 534, ../sass/main.scss */
+.coach .seat.back .wrap {
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+/* line 535, ../sass/main.scss */
+.coach .seat.back .wrap .base {
+  padding-top: 7px;
+  height: 36px;
+  border-radius: 7px 7px 0 0;
+}
+/* line 536, ../sass/main.scss */
+.coach .seat.back .wrap .base i {
+  border-radius: 7px 7px 0 0;
+}
+/* line 542, ../sass/main.scss */
+.coach .seat.back.big .wrap .base {
+  height: 48px;
+}
+/* line 547, ../sass/main.scss */
+.coach .seat.occupied .wrap .base {
+  background-color: #bd9d9a;
+}
+/* line 548, ../sass/main.scss */
+.coach .seat.occupied .wrap .base i {
+  color: #bd9d9a;
+  background-color: #e7d8d6;
+}
+/* line 549, ../sass/main.scss */
+.coach .seat.occupied .wrap .base i b {
+  font-weight: normal;
+  text-decoration: line-through;
+}
+/* line 554, ../sass/main.scss */
+.coach a.seat.free {
+  cursor: pointer;
+}
+/* line 555, ../sass/main.scss */
+.coach a.seat.free .wrap {
+  cursor: pointer;
+}
+/* line 556, ../sass/main.scss */
+.coach a.seat.free .wrap .base {
+  background-color: #74a45c;
+}
+/* line 557, ../sass/main.scss */
+.coach a.seat.free .wrap .base i {
+  color: #333333;
+  background-color: #c7ddbc;
+}
+/* line 563, ../sass/main.scss */
+.coach a.seat.free.selected .wrap .base {
+  background-color: #006dc2;
+}
+/* line 564, ../sass/main.scss */
+.coach a.seat.free.selected .wrap .base i {
+  color: white;
+  background-color: #2985cc;
+  /*text-shadow: 0px 1px 2px $time-color;*/
+}
+/* line 568, ../sass/main.scss */
+.coach a.seat:hover {
+  text-decoration: none;
+}
+/* line 569, ../sass/main.scss */
+.coach a.seat:hover .wrap {
+  background-color: white;
+}
+/* line 572, ../sass/main.scss */
+.coach a.seat.active .wrap {
+  border: 1px solid black;
+  background-color: white;
+}
+/* line 577, ../sass/main.scss */
+.coach .empty {
+  float: left;
+  width: 48px;
+  height: 54px;
+  /*background-color: rgba(0,125,125,0.2); background-origin: content-box;*/
+}
+/* line 579, ../sass/main.scss */
+.coach .empty.y2 {
+  height: 108px;
+}
+/* line 580, ../sass/main.scss */
+.coach .empty.y3 {
+  height: 162px;
+}
+/* line 581, ../sass/main.scss */
+.coach .empty.x2 {
+  width: 96px;
+}
+/* line 582, ../sass/main.scss */
+.coach .empty.x3 {
+  width: 144px;
+}
+/* line 584, ../sass/main.scss */
+.coach .empty.x2.y2 span {
+  width: 96px;
+  height: 108px;
+}
+/* line 587, ../sass/main.scss */
+.coach .empty.x3.y2 span {
+  width: 144px;
+  height: 108px;
+}
+/* line 590, ../sass/main.scss */
+.coach .empty.x2.y3 span {
+  width: 96px;
+  height: 162px;
+}
+/* line 592, ../sass/main.scss */
+.coach .empty.x2.y2, .coach .empty.x2.y3 {
+  text-align: center;
+  font-size: 11px;
+  font-family: verdana, tahoma, sans-serif;
+  color: gray;
+}
+/* line 593, ../sass/main.scss */
+.coach .empty.x2.y2 span, .coach .empty.x2.y3 span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 594, ../sass/main.scss */
+.coach .empty.x2.y2 span em, .coach .empty.x2.y3 span em {
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+/* line 595, ../sass/main.scss */
+.coach .empty.x2.y2 span i, .coach .empty.x2.y3 span i {
+  font-style: normal;
+}
+/* line 601, ../sass/main.scss */
+.coach .empty.big {
+  width: 60px;
+  height: 66px;
+}
+/* line 602, ../sass/main.scss */
+.coach .empty.big.x2 {
+  width: 120px;
+}
+/* line 603, ../sass/main.scss */
+.coach .empty.big.place {
+  text-align: center;
+  width: 60px;
+  height: 66px;
+}
+/* line 604, ../sass/main.scss */
+.coach .empty.big.place span {
+  display: inline-block;
+  line-height: 46px;
+  height: 48px;
+  width: 48px;
+  margin-top: 8px;
+  border: 1px dashed gray;
+  border-radius: 4px;
+  color: gray;
+  font-size: 11px;
+  font-family: verdana, tahoma, sans-serif;
+}
+/* line 605, ../sass/main.scss */
+.coach .empty.big.place .icon40 {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 607, ../sass/main.scss */
+.coach .icon40 {
+  display: block;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img/icons-40px.png');
+  background-size: auto 80px;
+}
+/* line 608, ../sass/main.scss */
+.coach .wheelchair .icon40 {
+  background-position: -1380px 0;
+}
+/* line 609, ../sass/main.scss */
+.coach .baby .icon40 {
+  background-position: -1420px 0;
+}
+/* line 610, ../sass/main.scss */
+.coach .bicykle .icon40 {
+  background-position: -1460px 0;
+}
+/* line 611, ../sass/main.scss */
+.coach .baggage .icon40 {
+  background-position: -1500px 0;
+}
+/* line 615, ../sass/main.scss */
+.coach .empty.title {
+  text-align: center;
+  font-family: georgia, serif;
+  font-style: italic;
+}
+/* line 616, ../sass/main.scss */
+.coach .empty.title span {
+  line-height: 54px;
+}
+/* line 618, ../sass/main.scss */
+.coach .empty.title.y05 {
+  text-align: center;
+}
+/* line 619, ../sass/main.scss */
+.coach .empty.title.y05 span {
+  line-height: 30px;
+}
+/* line 621, ../sass/main.scss */
+.coach .empty.title.big {
+  text-align: center;
+}
+/* line 622, ../sass/main.scss */
+.coach .empty.title.big span {
+  line-height: 66px;
+}
+/* line 624, ../sass/main.scss */
+.coach .empty.title.ext {
+  margin-left: -10px;
+  margin-right: -10px;
+  width: 68px;
+  text-align: center;
+}
+/* line 625, ../sass/main.scss */
+.coach .empty.title.ext span {
+  line-height: 48px;
+}
+/* line 627, ../sass/main.scss */
+.coach .empty.title.ext.big {
+  width: 80px;
+  /* 60*/
+}
+/* line 629, ../sass/main.scss */
+.coach .empty.title.ext.y05 span {
+  line-height: 30px;
+}
+/* line 634, ../sass/main.scss */
+.coach .empty.y05 {
+  height: 30px;
+}
+/* line 636, ../sass/main.scss */
+.coach .empty.y05.desk span {
+  display: inline-block;
+  width: 42px;
+  line-height: 22px;
+  height: 22px;
+  margin-top: 3px;
+  font-size: 11px;
+  font-family: verdana, tahoma, sans-serif;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  color: gray;
+  text-align: center;
+}
+/* line 638, ../sass/main.scss */
+.coach .empty.y05.desk.x2 {
+  width: 96px;
+}
+/* line 639, ../sass/main.scss */
+.coach .empty.y05.desk.x2 span {
+  width: 76px;
+}
+/* line 641, ../sass/main.scss */
+.coach .empty.y05.desk.x2.big {
+  width: 120px;
+}
+/* line 642, ../sass/main.scss */
+.coach .empty.y05.desk.x2.big span {
+  width: 100px;
+}
+/* line 645, ../sass/main.scss */
+.coach .empty.y05.desk.big span {
+  width: 55px;
+}
+/* line 647, ../sass/main.scss */
+.coach .empty.y05.desk.l {
+  text-align: left;
+}
+/* line 648, ../sass/main.scss */
+.coach .empty.y05.desk.l span {
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+/* line 650, ../sass/main.scss */
+.coach .empty.y05.desk.r {
+  text-align: right;
+}
+/* line 651, ../sass/main.scss */
+.coach .empty.y05.desk.r span {
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+/* line 655, ../sass/main.scss */
+.coach .empty.y01 {
+  height: 4px;
+}
+/* line 656, ../sass/main.scss */
+.coach .empty.y01.wall {
+  background-color: #b3b3b3;
+}
+/* line 661, ../sass/main.scss */
+.coach .icon60 {
+  display: block;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  background-image: url('../img/icons-60px.png');
+  background-size: auto 60px;
+}
+/* line 663, ../sass/main.scss */
+.coach .toilet .icon60 {
+  background-position: -60px 0;
+}
+/* line 664, ../sass/main.scss */
+.coach .bicykle .icon60 {
+  background-position: -120px 0;
+}
+/* line 665, ../sass/main.scss */
+.coach .baggage .icon60 {
+  background-position: -180px 0;
+}
+/* line 670, ../sass/main.scss */
+.coach .empty.x2.y2.cube span {
+  width: 88px;
+  height: 100px;
+  border: 4px solid #b3b3b3;
+}
+/* line 671, ../sass/main.scss */
+.coach .empty.x2.y2.cube span i {
+  font-style: normal;
+}
+/* line 675, ../sass/main.scss */
+.coach .empty.x2.y3.cube span {
+  width: 88px;
+  height: 154px;
+  border: 4px solid #b3b3b3;
+}
+/* line 676, ../sass/main.scss */
+.coach .empty.x2.y3.cube span i {
+  font-style: normal;
+}
+/* line 679, ../sass/main.scss */
+.coach .empty.x2.y2.cube.l span, .coach .empty.x2.y3.cube.l span {
+  border-left: none;
+  width: 92px;
+}
+/* line 680, ../sass/main.scss */
+.coach .empty.x2.y2.cube.r span, .coach .empty.x2.y3.cube.r span {
+  border-right: none;
+  width: 92px;
+}
+/* line 682, ../sass/main.scss */
+.coach .empty.x2.y2.cube.b span {
+  height: 104px;
+  border-bottom: none;
+}
+/* line 685, ../sass/main.scss */
+.coach .empty.x2.y3.cube.b span {
+  height: 158px;
+  border-bottom: none;
+}
+/* line 688, ../sass/main.scss */
+.coach .empty.x2.y2.cube.t span {
+  height: 104px;
+  border-top: none;
+}
+/* line 691, ../sass/main.scss */
+.coach .empty.x2.y3.cube.t span {
+  height: 158px;
+  border-top: none;
+}
+/* line 696, ../sass/main.scss */
+.coach .empty.x5.y2 {
+  width: 240px;
+  height: 108px;
+}
+/* line 698, ../sass/main.scss */
+.coach .empty.x5.y2.entrance span {
+  display: block;
+  width: 248px;
+  height: 66px;
+  margin-left: -4px;
+  margin-top: 21px;
+  background-color: #e5e5e5;
+}
+/* line 700, ../sass/main.scss */
+.coach .empty.x5.y1 {
+  width: 240px;
+  height: 54px;
+}
+/* line 701, ../sass/main.scss */
+.coach .empty.x5.y1.entrance.top {
+  position: absolute;
+  height: 4px !important;
+}
+/* line 702, ../sass/main.scss */
+.coach .empty.x5.y1.entrance.top span {
+  display: block;
+  width: 48px;
+  position: absolute;
+  height: 4px;
+  top: -4px;
+  left: 96px;
+  background-color: #e5e5e5;
+}
+/* line 704, ../sass/main.scss */
+.coach .empty.x5.y1.entrance.bottom {
+  position: absolute;
+  height: 4px !important;
+}
+/* line 705, ../sass/main.scss */
+.coach .empty.x5.y1.entrance.bottom span {
+  display: block;
+  width: 48px;
+  position: absolute;
+  height: 4px;
+  top: 0px;
+  left: 96px;
+  background-color: #e5e5e5;
+}

@@ -1,0 +1,6 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+.ace_editor {
+  width:45%;
+  height:90%;
+}
