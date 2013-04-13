@@ -13,6 +13,16 @@ describe "coachInverter", ->
     inverter $
     expect($.html()).to.be.equal "<div class=\"empty y05 desk x2 l\"><span>Stolek</span></div>"
 
+  it "should invert left->right", ->
+    $ = cheerio.load('<div class="empty x2 y3 cube toilet left"><span><em class="icon60"></em><i>Toaleta</i></span></div>')
+    inverter $
+    expect($.html()).to.be.equal '<div class="empty x2 y3 cube toilet right"><span><em class="icon60"></em><i>Toaleta</i></span></div>'
+
+  it "should invert right->left", ->
+    $ = cheerio.load('<div class="empty x2 y3 cube toilet right"><span><em class="icon60"></em><i>Toaleta</i></span></div>')
+    inverter $
+    expect($.html()).to.be.equal '<div class="empty x2 y3 cube toilet left"><span><em class="icon60"></em><i>Toaleta</i></span></div>'
+
   it "should invert top->bottom", ->
     $ = cheerio.load("<div class=\"empty x5 y1 entrance top\"><span></span></div>")
     inverter $
@@ -112,6 +122,36 @@ describe "coachInverter", ->
           <div class="empty"></div>
           <a class="seat" seat="188"><span class="wrap"><span class="base"><i><b>188</b></i></span></span></a>
           <a class="seat" seat="189"><span class="wrap"><span class="base"><i><b>189</b></i></span></span></a>
+        </div>
+      </div>
+      """.replace(/>\s+</g, '><')
+    expect($.html()).to.be.equal expected
+
+  it "should reverse items in a wrapper", ->
+    $ = cheerio.load(
+      """
+      <div class="coach">
+        <div class="series">
+          <div class="empty x2 y3 cube toilet"><span><em class="icon60"></em><i>Toaleta</i></span></div>
+          <div class="wrapper x3 y3">
+            <div class="empty x3 y2"></div>
+            <div class="empty x2"></div>
+            <a class="" seat="57"><span class="wrap"><span class="base"><i><b>57</b></i></span></span></a>
+          </div>
+        </div>
+      </div>
+      """.replace(/>\s+</g, '><'))
+    inverter $
+    expected =
+      """
+      <div class="coach">
+        <div class="series">
+          <div class="wrapper x3 y3">
+            <a class="" seat="57"><span class="wrap"><span class="base"><i><b>57</b></i></span></span></a>
+            <div class="empty x2"></div>
+            <div class="empty x3 y2"></div>
+          </div>
+          <div class="empty x2 y3 cube toilet"><span><em class="icon60"></em><i>Toaleta</i></span></div>
         </div>
       </div>
       """.replace(/>\s+</g, '><')

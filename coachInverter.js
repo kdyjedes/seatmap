@@ -1,17 +1,17 @@
 module.exports = function($) {
 
-  // 1) reverse all coach children
+  // reverse all coach children
   var length = $('.coach').children().length-2;
   for (var i = length; i >= 0; i--) {
     var child = $('.coach').children().eq(i).remove();
     $('.coach').append(child);
   }
 
-  // 2) clearfix needs to be the last item
+  // clearfix needs to be the last item
   var clearfix = $('.clearfix').remove();
   $('.coach').append(clearfix);
 
-  // 3) reverse all series' children
+  // reverse all series' children
   $('.series').each(function(index, series) {
     var childrenLength = $(series).children().length-2;
     for (var i = childrenLength; i >= 0; i--) {
@@ -20,8 +20,17 @@ module.exports = function($) {
     }
   });
 
-  // 4) switch classes l<->r, t<->b for .empty
-  $('.empty').each(function(i, empty) {
+  // reverse all items in a wrapper
+  $('.wrapper').each(function(index, wrapper) {
+    var childrenLength = $(wrapper).children().length-2;
+    for (var i = childrenLength; i >= 0; i--) {
+      var child = $(wrapper).children().eq(i).remove();
+      $(wrapper).append(child);
+    }
+  });
+
+  // switch classes l<->r, t<->b, left<->right for .empty and .wrapper
+  $('.empty,.wrapper').each(function(i, empty) {
     empty = $(empty);
     if (empty.hasClass('l')) {
       empty.removeClass('l');
@@ -37,9 +46,16 @@ module.exports = function($) {
       empty.removeClass('b');
       empty.addClass('t');
     }
+    if (empty.hasClass('left')) {
+      empty.removeClass('left');
+      empty.addClass('right');
+    } else if (empty.hasClass('right')) {
+      empty.removeClass('right');
+      empty.addClass('left');
+    }
   });
 
-  // 5) switch back<->*empty* class for seats
+  // switch back<->*empty* class for seats
   $('.seat').each(function(i, seat) {
     seat = $(seat);
     if (seat.hasClass('back')) {
@@ -49,7 +65,7 @@ module.exports = function($) {
     }
   });
 
-  // 6) switch top<->bottom class for entrance
+  // switch top<->bottom class for entrance
   $('.entrance').each(function(i, entrance) {
     entrance = $(entrance);
     if (entrance.hasClass('top')) {
