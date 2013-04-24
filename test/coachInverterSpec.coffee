@@ -66,6 +66,32 @@ describe "coachInverter", ->
       """.replace(/>\s+</g, '><')
     expect($.html()).to.be.equal expected
 
+  it "should place clearfix before bottom entrance", ->
+    $ = cheerio.load(
+      """
+      <div class="coach">
+        <div class="empty x5 y1 entrance top"><span></span></div>
+        <div class="series">
+          <a class="seat back" seat="189"><span class="wrap"><span class="base"><i><b>189</b></i></span></span></a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="empty x5 y1 entrance bottom"><span></span></div>
+      </div>
+      """.replace(/>\s+</g, '><'))
+    inverter $
+    expected =
+      """
+      <div class="coach">
+        <div class="empty x5 y1 entrance top"><span></span></div>
+        <div class="series">
+          <a class="seat" seat="189"><span class="wrap"><span class="base"><i><b>189</b></i></span></span></a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="empty x5 y1 entrance bottom"><span></span></div>
+      </div>
+      """.replace(/>\s+</g, '><')
+    expect($.html()).to.be.equal expected
+
 
   it "should reverse series", ->
     $ = cheerio.load(
