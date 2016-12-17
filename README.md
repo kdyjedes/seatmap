@@ -16,6 +16,6 @@ Seatmap is a cool tool to edit seat maps.
 
 ### Tests
 
-Node scripts are tested using [mocha](http://visionmedia.github.io/mocha/). Just run `mocha test`.
+Node scripts are tested using [mocha](http://mochajs.org/). Just run `mocha test`.
 
 Browser stuff is tested using the awesome [Karma](http://karma-runner.github.io/). Run it using `karma start karma.conf.js`.
